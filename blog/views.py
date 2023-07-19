@@ -14,7 +14,7 @@ def post_detail(request, id):
         post = Post.published.get(id=id)
     except Post.DoesNotExist:
         return render(request,
-                      '***.html')
+                      'blog/base.html')
     return render(request,
                   'blog/post/detail.html',
                   {'post': post})
